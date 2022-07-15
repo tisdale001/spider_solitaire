@@ -1,0 +1,3 @@
+/home/user/cpp_projects/spiderOneSuitSolitaire/CMakeFiles/rebuild_cache.dir
+/home/user/cpp_projects/spiderOneSuitSolitaire/CMakeFiles/edit_cache.dir
+/home/user/cpp_projects/spiderOneSuitSolitaire/CMakeFiles/spider.dir
