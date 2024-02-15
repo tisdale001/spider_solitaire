@@ -19,6 +19,9 @@ For complete rules, try this link: [https://www.bvssolitaire.com/rules/spider-so
 
 ## How to Build
 cd into bin directory
+You may have to change line 48 in cmake_install.cmake to your actual path. Something like this:
+file(WRITE "/home/user/GithubRepos/spider_solitaire/${CMAKE_INSTALL_MANIFEST}"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 ```
 cmake ..
 make
