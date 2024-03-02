@@ -160,6 +160,7 @@ void View::setPosition() {
 
 // draws all sprites in non empty piles
 void View::draw(sf::RenderWindow* window) {
+    frameStartTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
     window->clear();
 	// set all sprite positions
     setPosition();
@@ -194,9 +195,19 @@ void View::draw(sf::RenderWindow* window) {
     }
 
     window->display();
+    limitFPS();
 }
 
 //void View::animateCards(sf::RenderWindow* window, std::shared_ptr<std::vector<std::shared_ptr<Card>>> to_pile);
+
+// frame-capping function: sleeps between animation frames
+void View::limitFPS() {
+    uint64_t ms = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+    uint64_t frameTicks = ms - frameStartTime;
+    if (frameTicks < maxTicksPerFrame) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(maxTicksPerFrame - frameTicks));
+    }
+}
 
 // animates card explosion after a win
 void View::animateWin(sf::RenderWindow* window) {
@@ -256,22 +267,29 @@ void View::animateWin(sf::RenderWindow* window) {
         }
         // iterate through ani_vec, adding one each time
         for (int i = 0; i < (int)ani_vec.size() - 1; i++) {
+            frameStartTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
             window->clear();
             for (int j = 0; j < i + 1; j++) {
                 ani_vec.at(j).advance(i - ani_vec.at(j).getID());
                 window->draw(*(ani_vec.at(j).getPSprite()));
             }
             window->display();
+            // delay for frame-capping
+            limitFPS();
         }
         // keep animating more frames
         for (int i = (int)ani_vec.size(); i < (int)ani_vec.size() + 600; i++) {
+            frameStartTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
             window->clear();
             for (int j = 0; j < (int)ani_vec.size(); j++) {
                 ani_vec.at(j).advance(i - ani_vec.at(j).getID());
                 window->draw(*(ani_vec.at(j).getPSprite()));
             }
             window->display();
+            // delay for frame-capping
+            limitFPS();
         }
+        
     }
 }
 
@@ -334,21 +352,25 @@ void View::animateWin2(sf::RenderWindow* window) {
         }
         // iterate through ani_vec, adding one each time
         for (int i = 0; i < (int)ani_vec.size() - 1; i++) {
+            frameStartTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
             window->clear();
             for (int j = 0; j < i + 1; j++) {
                 ani_vec.at(j).advance(i - ani_vec.at(j).getID());
                 window->draw(*(ani_vec.at(j).getPSprite()));
             }
             window->display();
+            limitFPS();
         }
         // keep animating more frames
         for (int i = (int)ani_vec.size(); i < (int)ani_vec.size() + 600; i++) {
+            frameStartTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
             window->clear();
             for (int j = 0; j < (int)ani_vec.size(); j++) {
                 ani_vec.at(j).advance(i - ani_vec.at(j).getID());
                 window->draw(*(ani_vec.at(j).getPSprite()));
             }
             window->display();
+            limitFPS();
         }
     }
 }

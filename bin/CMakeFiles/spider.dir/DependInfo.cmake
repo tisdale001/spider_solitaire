@@ -1,26 +1,24 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/AnimationWrapper.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/AnimationWrapper.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/AnimationWrapperST.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/AnimationWrapperST.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/Card.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/Card.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/ControllerSpider.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/ControllerSpider.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/DealOneRound.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/DealOneRound.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/DeckSpades.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/DeckSpades.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/FillFoundationPile.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/FillFoundationPile.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/Main.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/Main.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/ModelSpider.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/ModelSpider.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/Move.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/Move.cpp.o"
-  "/home/user/cpp_projects/spiderOneSuitSolitaire/src/ViewSpider.cpp" "/home/user/cpp_projects/spiderOneSuitSolitaire/bin/CMakeFiles/spider.dir/src/ViewSpider.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  ".././include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/AnimationWrapper.cpp" "CMakeFiles/spider.dir/src/AnimationWrapper.cpp.o" "gcc" "CMakeFiles/spider.dir/src/AnimationWrapper.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/AnimationWrapperST.cpp" "CMakeFiles/spider.dir/src/AnimationWrapperST.cpp.o" "gcc" "CMakeFiles/spider.dir/src/AnimationWrapperST.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/Card.cpp" "CMakeFiles/spider.dir/src/Card.cpp.o" "gcc" "CMakeFiles/spider.dir/src/Card.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/ControllerSpider.cpp" "CMakeFiles/spider.dir/src/ControllerSpider.cpp.o" "gcc" "CMakeFiles/spider.dir/src/ControllerSpider.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/DealOneRound.cpp" "CMakeFiles/spider.dir/src/DealOneRound.cpp.o" "gcc" "CMakeFiles/spider.dir/src/DealOneRound.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/DeckSpades.cpp" "CMakeFiles/spider.dir/src/DeckSpades.cpp.o" "gcc" "CMakeFiles/spider.dir/src/DeckSpades.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/FillFoundationPile.cpp" "CMakeFiles/spider.dir/src/FillFoundationPile.cpp.o" "gcc" "CMakeFiles/spider.dir/src/FillFoundationPile.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/Main.cpp" "CMakeFiles/spider.dir/src/Main.cpp.o" "gcc" "CMakeFiles/spider.dir/src/Main.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/ModelSpider.cpp" "CMakeFiles/spider.dir/src/ModelSpider.cpp.o" "gcc" "CMakeFiles/spider.dir/src/ModelSpider.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/Move.cpp" "CMakeFiles/spider.dir/src/Move.cpp.o" "gcc" "CMakeFiles/spider.dir/src/Move.cpp.o.d"
+  "/home/luciantisdale/GithubRepos/spider_solitaire/src/ViewSpider.cpp" "CMakeFiles/spider.dir/src/ViewSpider.cpp.o" "gcc" "CMakeFiles/spider.dir/src/ViewSpider.cpp.o.d"
   )
 
 # Targets to which this target links.

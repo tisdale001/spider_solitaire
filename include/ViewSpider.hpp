@@ -11,6 +11,8 @@
 #include <memory>
 #include <cstdlib>
 #include <ctime>
+#include <chrono>
+#include<thread>
 
 #include <Card.hpp>
 #include <DeckSpades.hpp>
@@ -26,6 +28,8 @@ class View {
     int cardWidth = 0; // set cardWidth with sprite.getSize()
     int startPointX = 100;
     int startPointY = 100;
+    uint64_t frameStartTime;
+    uint64_t maxTicksPerFrame = (uint64_t)(1000 / 160);
     sf::Image image; // initiate
     sf::Texture texture; // initiate
     sf::Sprite sprite; // initiate
@@ -82,6 +86,7 @@ class View {
     void setPosition();
     void draw(sf::RenderWindow* window);
 
+    void limitFPS();
     void animateWin(sf::RenderWindow* window);
     void animateWin2(sf::RenderWindow* window);
 
